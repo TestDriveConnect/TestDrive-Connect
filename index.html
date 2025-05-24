@@ -173,29 +173,23 @@
       text-align: center;
     }
 
-    /* Footer */
-    footer {
-      background-color: var(--primary);
-      color: var(--secondary);
-      text-align: center;
-      padding: 20px;
-    }
-
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
+    /* Form */
     .form {
       margin-top: 20px;
     }
 
-    .form input[type="email"] {
+    .form input, .form select, .form textarea {
       padding: 12px;
-      width: 250px;
+      width: 90%;
+      max-width: 400px;
       border: 1px solid #ccc;
       border-radius: 6px;
-      margin-right: 10px;
+      margin: 8px 0;
+      font-size: 1rem;
+    }
+
+    .form textarea {
+      resize: vertical;
     }
 
     .form input[type="submit"] {
@@ -210,6 +204,19 @@
 
     .form input[type="submit"]:hover {
       background-color: #333333;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--primary);
+      color: var(--secondary);
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
     }
   </style>
 </head>
@@ -238,8 +245,8 @@
   <header>
     <h1>TestDrive Connect</h1>
     <p>Your trusted eyes behind the wheel.</p>
-    <a href="#" class="cta-btn">Request a Test Drive</a>
-    <a href="#" class="cta-btn">Become a Test Driver</a>
+    <a href="#contact" class="cta-btn">Request a Test Drive</a>
+    <a href="#contact" class="cta-btn">Become a Test Driver</a>
   </header>
 
   <!-- Sections -->
@@ -276,10 +283,19 @@
   </section>
 
   <section id="contact">
-    <h2>Stay in the Loop</h2>
-    <form class="form">
-      <input type="email" placeholder="Enter your email">
-      <input type="submit" value="Notify Me">
+    <h2>Request a Test Drive</h2>
+    <p>Fill out the form below to get started!</p>
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="tel" name="phone" placeholder="Your Phone Number (optional)">
+      <select name="service" required>
+        <option value="">Select a Service</option>
+        <option value="test-drive">Request a Test Drive</option>
+        <option value="driver-signup">Become a Test Driver</option>
+      </select>
+      <textarea name="message" rows="4" placeholder="Tell us about the car, dealership, and what you'd like checked." required></textarea>
+      <input type="submit" value="Submit">
     </form>
   </section>
 
@@ -288,11 +304,10 @@
     <p>Contact us at <a href="mailto:info@testdriveconnect.com">info@testdriveconnect.com</a></p>
   </footer>
 
-  <!-- Hamburger Script -->
+  <!-- Hamburger Menu Script -->
   <script>
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('navMenu');
-
     hamburger.addEventListener('click', () => {
       navMenu.classList.toggle('active');
     });
@@ -300,3 +315,4 @@
 
 </body>
 </html>
+
