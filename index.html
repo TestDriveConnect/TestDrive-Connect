@@ -31,7 +31,6 @@
       scroll-behavior: smooth;
     }
 
-    /* Navbar */
     .navbar {
       background-color: var(--secondary);
       border-bottom: 1px solid #ddd;
@@ -111,7 +110,6 @@
       }
     }
 
-    /* Hero */
     header {
       background-color: var(--primary);
       color: var(--secondary);
@@ -146,7 +144,6 @@
       background-color: #e6c64a;
     }
 
-    /* Sections */
     section {
       padding: 60px 20px;
       text-align: center;
@@ -173,7 +170,6 @@
       text-align: center;
     }
 
-    /* Form */
     .form {
       margin-top: 20px;
     }
@@ -206,7 +202,6 @@
       background-color: #333333;
     }
 
-    /* Footer */
     footer {
       background-color: var(--primary);
       color: var(--secondary);
@@ -223,7 +218,6 @@
 
 <body>
 
-  <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-container">
       <a href="#" class="nav-logo">TestDrive Connect</a>
@@ -241,7 +235,6 @@
     </div>
   </nav>
 
-  <!-- Hero -->
   <header>
     <h1>TestDrive Connect</h1>
     <p>Your trusted eyes behind the wheel.</p>
@@ -249,7 +242,6 @@
     <a href="#contact" class="cta-btn">Become a Test Driver</a>
   </header>
 
-  <!-- Sections -->
   <section id="how-it-works">
     <h2>How It Works</h2>
     <div class="features">
@@ -295,16 +287,21 @@
         <option value="driver-signup">Become a Test Driver</option>
       </select>
       <textarea name="message" rows="4" placeholder="Tell us about the car, dealership, and what you'd like checked." required></textarea>
+
+      <label style="font-size: 0.9rem; display: block; margin: 10px 0;">
+        <input type="checkbox" required>
+        I acknowledge that TestDrive Connect provides a preliminary test drive service by a third-party driver and is not a professional inspection. I understand that purchasing decisions are solely my responsibility, and I agree to release TestDrive Connect and the dealership from any liability or dissatisfaction after purchase.
+      </label>
+
       <input type="submit" value="Submit">
     </form>
   </section>
 
   <footer>
     <p>&copy; 2025 TestDrive Connect. All rights reserved.</p>
-    <p>Contact us at <a href="mailto:info@testdriveconnect.com">info@testdriveconnect.com</a></p>
+    <p><a href="terms.html">Terms & Conditions</a> | Contact us at <a href="mailto:info@testdriveconnect.com">info@testdriveconnect.com</a></p>
   </footer>
 
-  <!-- Hamburger Menu Script -->
   <script>
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('navMenu');
@@ -315,4 +312,3 @@
 
 </body>
 </html>
-
