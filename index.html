@@ -27,6 +27,91 @@
       line-height: 1.6;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #000;
+      text-decoration: none;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-menu li a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .nav-menu li a:hover {
+      color: #f4d35e;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .bar {
+      height: 3px;
+      width: 25px;
+      background-color: #000;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #ffffff;
+        width: 200px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+      }
+
+      .nav-menu.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    /* Hero */
     header {
       background-color: var(--primary);
       color: var(--secondary);
@@ -61,6 +146,7 @@
       background-color: #e6c64a;
     }
 
+    /* Sections */
     section {
       padding: 60px 20px;
       text-align: center;
@@ -87,6 +173,7 @@
       text-align: center;
     }
 
+    /* Footer */
     footer {
       background-color: var(--primary);
       color: var(--secondary);
@@ -128,6 +215,26 @@
 </head>
 
 <body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">TestDrive Connect</a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#for-dealerships">For Dealerships</a></li>
+        <li><a href="#for-drivers">For Drivers</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
   <header>
     <h1>TestDrive Connect</h1>
     <p>Your trusted eyes behind the wheel.</p>
@@ -135,7 +242,8 @@
     <a href="#" class="cta-btn">Become a Test Driver</a>
   </header>
 
-  <section>
+  <!-- Sections -->
+  <section id="how-it-works">
     <h2>How It Works</h2>
     <div class="features">
       <div class="feature-box">
@@ -157,17 +265,17 @@
     </div>
   </section>
 
-  <section>
+  <section id="for-dealerships">
     <h2>For Dealerships</h2>
     <p>Offer TestDrive Connect to your customers and unlock sales from out-of-town buyers. Build trust, reduce returns, and close more deals.</p>
   </section>
 
-  <section>
+  <section id="for-drivers">
     <h2>For Drivers</h2>
     <p>Get paid to test drive cars in your area. Flexible gigs for car enthusiasts, students, retirees, and mechanics alike.</p>
   </section>
 
-  <section>
+  <section id="contact">
     <h2>Stay in the Loop</h2>
     <form class="form">
       <input type="email" placeholder="Enter your email">
@@ -179,5 +287,16 @@
     <p>&copy; 2025 TestDrive Connect. All rights reserved.</p>
     <p>Contact us at <a href="mailto:info@testdriveconnect.com">info@testdriveconnect.com</a></p>
   </footer>
+
+  <!-- Hamburger Menu Script -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+
 </body>
 </html>
