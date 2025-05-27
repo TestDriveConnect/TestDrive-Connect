@@ -52,20 +52,23 @@ a {
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 40px;
+  padding: 40px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .main-left {
-  max-width: 600px;
+  flex: 1;
+  text-align: left;
 }
 
 .main-left h1 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
 .main-left p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 20px;
 }
 
@@ -88,19 +91,23 @@ a {
   background-color: #e6c64a;
 }
 
+.main-right {
+  flex: 1;
+}
+
 .main-right img {
   max-width: 100%;
   height: auto;
   border-radius: 12px;
-  margin-left: 40px;
 }
 
 .started-container {
   display: flex;
-  flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 40px;
+  padding: 40px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .started-left img {
@@ -111,16 +118,17 @@ a {
 }
 
 .started-right {
+  text-align: left;
   max-width: 600px;
 }
 
 .started-right h1 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
 .started-right p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 20px;
 }
 
@@ -135,21 +143,16 @@ a {
   margin-bottom: 10px;
 }
 
-.started-btns p {
-  font-size: 0.9rem;
-  color: #666;
-}
-
 .container, .form {
   max-width: 800px;
-  margin: 20px 40px;
+  margin: 40px auto;
+  padding: 0 20px;
   text-align: left;
 }
 
 .form input, .form select, .form textarea {
   padding: 12px;
   width: 100%;
-  max-width: 400px;
   border: 1px solid #ccc;
   border-radius: 6px;
   margin: 8px 0;
@@ -219,6 +222,7 @@ a {
 @media (max-width: 768px) {
   .main-container, .started-container {
     flex-direction: column;
+    padding: 20px;
   }
 
   .main-right img, .started-left img {
