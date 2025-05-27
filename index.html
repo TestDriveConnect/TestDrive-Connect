@@ -14,8 +14,8 @@
     <div class="nav-left">
       <p class="logo">TestDrive Connect</p>
       <p class="menu-list"><a href="#how-it-works">How It Works</a></p>
-      <p class="menu-list"><a href="#driver-signup">Become a Driver</a></p>
-      <p class="menu-list"><a href="#contact">Request a Test Drive</a></p>
+      <p class="menu-list"><a href="driver-signup.html">Become a Driver</a></p>
+      <p class="menu-list"><a href="request-test-drive.html">Request a Test Drive</a></p>
     </div>
     <div class="nav-right">
       <p class="menu-list"><a href="terms.html">Terms</a></p>
@@ -47,47 +47,19 @@
       <h1>How It Works</h1>
       <p>Request a test drive in any city. A local driver inspects the car, takes photos/videos, and sends a report. You buy with confidence.</p>
       <div class="started-btns">
-        <button onclick="window.location.href='#contact'">Get Started</button>
+        <button onclick="window.location.href='request-test-drive.html'">Get Started</button>
       </div>
     </div>
   </div>
 
-  <section id="driver-signup" class="container">
-    <h2>Driver Signup</h2>
-    <p>Earn extra cash by helping car buyers make informed decisions.</p>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="form">
-      <input type="hidden" name="_redirect" value="https://testdriveconnect.github.io/thankyou.html">
-      <input type="text" name="name" placeholder="Full Name" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
-      <input type="text" name="location" placeholder="City & State" required>
-      <input type="text" name="license" placeholder="Driver's License Number (optional)">
-      <textarea name="experience" placeholder="Tell us about your driving experience or why you want to join." rows="4" required></textarea>
-      <label style="font-size: 0.9rem; display: block; margin: 10px 0;">
-        <input type="checkbox" required>
-        I agree to the <a href="driver-agreement.html" target="_blank">Driver Agreement</a> and understand that I am an independent contractor.
-      </label>
-      <input type="submit" value="Submit Application">
-    </form>
+  <section class="container">
+    <h2>Our Mission</h2>
+    <p>At TestDrive Connect, our mission is simple: to empower car buyers with the confidence to make informed purchasing decisions, no matter where they are. We believe that distance should never be a barrier when it comes to finding the perfect vehicle.</p>
   </section>
 
-  <section id="contact" class="container">
-    <h2>Request a Test Drive</h2>
-    <p>Fill out the form below to get started!</p>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="form">
-      <input type="hidden" name="_redirect" value="https://testdriveconnect.github.io/thankyou.html">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="tel" name="phone" placeholder="Your Phone Number">
-      <input type="text" name="car" placeholder="Car Interested In" required>
-      <input type="text" name="dealership" placeholder="Dealership Location" required>
-      <textarea name="message" rows="4" placeholder="What would you like checked?" required></textarea>
-      <label style="font-size: 0.9rem; display: block; margin: 10px 0;">
-        <input type="checkbox" required>
-        I understand that TestDrive Connect is not a professional inspection service. I agree to the <a href="terms.html" target="_blank">Terms & Conditions</a>.
-      </label>
-      <input type="submit" value="Submit Request">
-    </form>
+  <section class="container">
+    <h2>Who We Are</h2>
+    <p>TestDrive Connect is a community-driven platform of drivers, mechanics, and car enthusiasts dedicated to helping others navigate the used car market with peace of mind. We’re passionate about creating a seamless experience that bridges the gap between buyers and dealerships across the country.</p>
   </section>
 
   <div class="footer">
@@ -99,8 +71,8 @@
     </div>
     <div class="footer-section">
       <h4>Services</h4>
-      <p>Request a Test Drive</p>
-      <p>Become a Driver</p>
+      <p><a href="request-test-drive.html">Request a Test Drive</a></p>
+      <p><a href="driver-signup.html">Become a Driver</a></p>
     </div>
     <div class="footer-section">
       <h4>Legal</h4>
@@ -120,4 +92,3 @@
 
 </body>
 </html>
-
