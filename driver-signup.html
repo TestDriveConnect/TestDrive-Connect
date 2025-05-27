@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Become a Driver - TestDrive Connect</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Driver Signup</h1>
+    <p>Earn extra cash by helping car buyers make informed decisions.</p>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="form">
+      <input type="hidden" name="_redirect" value="thankyou.html">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="text" name="location" placeholder="City & State" required>
+      <input type="text" name="license" placeholder="Driver's License Number (optional)">
+      <textarea name="experience" placeholder="Tell us about your driving experience or why you want to join." rows="4" required></textarea>
+      <label>
+        <input type="checkbox" required>
+        I agree to the <a href="driver-agreement.html">Driver Agreement</a> and understand I am an independent contractor.
+      </label>
+      <input type="submit" value="Submit Application">
+    </form>
+    <p><a href="index.html">Back to Home</a></p>
+  </div>
+</body>
+</html>
