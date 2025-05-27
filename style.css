@@ -17,7 +17,6 @@ a {
   color: inherit;
 }
 
-/* Navigation Bar */
 .navContainerWrap {
   display: flex;
   justify-content: space-between;
@@ -51,13 +50,6 @@ a {
   color: #f4d35e;
 }
 
-.text-icon {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-/* Main Hero Section */
 .main-container {
   display: flex;
   align-items: center;
@@ -97,7 +89,6 @@ a {
   border-radius: 12px;
 }
 
-/* Started Container */
 .started-container {
   display: flex;
   align-items: center;
@@ -137,7 +128,6 @@ a {
   color: #666;
 }
 
-/* Ride Section */
 .ride-wrap {
   display: flex;
   align-items: center;
@@ -176,7 +166,40 @@ a {
   border-radius: 12px;
 }
 
-/* Footer */
+.container, .form {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form input, .form select, .form textarea {
+  padding: 12px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.form textarea {
+  resize: vertical;
+}
+
+.form input[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.form input[type="submit"]:hover {
+  background-color: #333333;
+}
+
 .footer {
   display: flex;
   flex-wrap: wrap;
@@ -219,7 +242,6 @@ a {
   color: #fff;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .main-container, .started-container, .ride-wrap {
     flex-direction: column;
